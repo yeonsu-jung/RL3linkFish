@@ -8,6 +8,7 @@ import gym
 import numpy as np
 import os
 import fish_evasion as fish
+import strider
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 class Memory:
@@ -171,7 +172,8 @@ def main(k):
     #############################################
     
     # creating environment
-    env = fish.FishEvasionEnv(dt = 0.1)
+    # env = fish.FishEvasionEnv(dt = 0.1)
+    env = strider.strider(dt = 0.1)
 
     # set the length of an episode
     from gym.wrappers.time_limit import TimeLimit
