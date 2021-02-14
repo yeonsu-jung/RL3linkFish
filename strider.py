@@ -151,7 +151,8 @@ class strider(gym.Env):
         self.ma2 = ma2
         self.Ja = Ja
     def __initialConfig(self,mode, init_num):                    # get the initial configuration of the fish
-        X, Y, theta = 0, 0, np.random.rand()*2*np.pi-np.pi        
+        # X, Y, theta = 0, 0, np.random.rand()*2*np.pi-np.pi        
+        X, Y = 0, 0
         Alpha_1, Alpha_2 = np.random.rand()*2*np.pi/3 - np.pi/3, np.random.rand()*2*np.pi/3 - np.pi/3
         
         # if manually prescribing the shape change:
